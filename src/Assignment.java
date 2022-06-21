@@ -50,4 +50,14 @@ public class Assignment {
     public static void summationOrFactorial(int[] numArr, String operation) {
 
     }
+    /*
+    Given the number n print out n number of rows of pascals triangle
+    i.e pascalTriangle(3)
+       1
+      1 1
+     1 2 1
+     */
+    public static void pascalTriangle(int rows) {
+
+    }
 }
