@@ -1,6 +1,23 @@
 public class Assignment {
     public static void main(String[] args) {
         System.out.println("Hello World");
+        fizzbuzz(100,500);
+        calculate(10,10, "add"); //should print 20
+        calculate(10,10, "minus"); //should print 0
+        calculate(10,10, "multiply"); //should print 100
+        calculate(11,10, "divide"); //should print 1 remainder 1 or 1.1
+        //should print factorial is 120 largest is 5 smallest is 1
+        summationOrFactorial(new int[]{1,2,3,4,5}, "factorial");
+        //should print summation is 15 largest is 6 smallest is 0
+        summationOrFactorial(new int[]{0,2,3,4,6}, "summation");
+        /*
+        should print
+          1
+         1 1
+        1 2 1
+       1 3 3 1
+         */
+        pascalTriangle(4);
     }
     /*
     given 2 positive numbers generate a random number between the first and second number
