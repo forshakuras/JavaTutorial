@@ -36,6 +36,7 @@ public class Assignment {
     4/0 etc.
     i.e calculate(1,5,"add") should print out "1 plus 5 is equal to 6"
     Note: for division need to print out correct decimal or remainder or both even
+    hint: google "java int to double conversion"
     */
     public static void calculate(int firstNum, int secondNum, String operation) {
 
@@ -46,6 +47,7 @@ public class Assignment {
     i.e summationOrFactorial([1,2,3,4,5], "summation") should print
     "summation is equal to 15"
     "smallest number is 1 and largest number is 5"
+    hint google "java min/max int"
      */
     public static void summationOrFactorial(int[] numArr, String operation) {
 
@@ -56,6 +58,7 @@ public class Assignment {
        1
       1 1
      1 2 1
+     hint: use 2d int array
      */
     public static void pascalTriangle(int rows) {
 
