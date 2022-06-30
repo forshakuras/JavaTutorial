@@ -1,9 +1,9 @@
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.Random;
 
 public class Main {
-    public static void main(String @NotNull [] args) {
+    public static void main(String  [] args) {
         System.out.println(args[1]);
         //basic variables
         System.out.println("Hello world!");

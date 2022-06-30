@@ -1,7 +1,7 @@
 public class Assignment {
     public static void main(String[] args) {
         System.out.println("Hello World");
-        fizzbuzz(100,500);
+        fizzbuzz(1,15);
         calculate(10,10, "add"); //should print 20
         calculate(10,10, "minus"); //should print 0
         calculate(10,10, "multiply"); //should print 100
@@ -20,7 +20,7 @@ public class Assignment {
         pascalTriangle(4);
     }
     /*
-    given 2 positive numbers generate a random number between the first and second number
+
     then print out fizz if divisible by 3, buzz if divisible by 5 and fizzbuzz if divisible by 3 and 5
     from 1 for each number up to the random number
     i.e if firstnum is 1 and second num is 15 the result should be
@@ -44,7 +44,20 @@ public class Assignment {
     hint: google "modulo operator java"
     */
     public static void fizzbuzz(int firstNum, int secondNum) {
+        for (int i = firstNum; i <= secondNum; i++) {
+            if (i % 5 == 0 && i % 3 == 0) {
+                System.out.println("fizzbuzz");
+            }
+            else if (i % 5 == 0) {
+                System.out.println("buzz");
 
+            }
+           else if (i % 3 == 0) {
+                System.out.println("fizz");
+            } else {
+                System.out.println(i);
+            }
+        }
     }
     /*
     create a calculate method where given 2 numbers
