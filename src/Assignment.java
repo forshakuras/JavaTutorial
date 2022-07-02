@@ -145,14 +145,19 @@ public class Assignment {
      hint: use 2d int array
      */
     public static void pascalTriangle(int rows) {
-        int[][] arr = new int[rows][(rows*2)-1];
-        arr[0][arr[0].length/2] = 1;
-        if(rows>1) {
+        int[][] arr = new int[rows][(rows * 2) - 1];
+        arr[0][arr[0].length / 2] = 1;
+        if (rows > 1) {
+            System.out.println(arr[0][0]);
+        } else {
+            for(int i=1;i<rows;i++) {
 
+            }
+            //compute rows here
         }
         //print down here
-        for(int i=0;i<arr.length;i++) {
-            for(int j =0;j<arr[i].length;j++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j]);
             }
             System.out.println("");
