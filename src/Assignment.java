@@ -150,10 +150,10 @@ public class Assignment {
         if (rows > 1) {
             System.out.println(arr[0][0]);
         } else {
+            //compute rows here
             for(int i=1;i<rows;i++) {
 
             }
-            //compute rows here
         }
         //print down here
         for (int i = 0; i < arr.length; i++) {
