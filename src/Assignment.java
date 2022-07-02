@@ -1,15 +1,15 @@
 public class Assignment {
     public static void main(String[] args) {
         System.out.println("Hello World");
-        fizzbuzz(1, 15);
-        calculate(10, 10, "add"); //should print 20
-        calculate(10, 10, "minus"); //should print 0
-        calculate(10, 10, "multiply"); //should print 100
-        calculate(11, 10, "divide"); //should print 1 remainder 1 or 1.1
-        //should print factorial is 120 largest is 5 smallest is 1
-        summationOrFactorial(new int[]{1, 2, 3, 4, 5}, "factorial");
-        //should print summation is 15 largest is 6 smallest is 0
-        summationOrFactorial(new int[]{0, 2, 3, 4, 6}, "summation");
+//        fizzbuzz(1, 15);
+//        calculate(10, 10, "add"); //should print 20
+//        calculate(10, 10, "minus"); //should print 0
+//        calculate(10, 10, "multiply"); //should print 100
+//        calculate(11, 10, "divide"); //should print 1 remainder 1 or 1.1
+//        //should print factorial is 120 largest is 5 smallest is 1
+//        summationOrFactorial(new int[]{1, 2, 3, 4, 5}, "factorial");
+//        //should print summation is 15 largest is 6 smallest is 0
+//        summationOrFactorial(new int[]{0, 2, 3, 4, 6}, "summation");
         /*
         should print
           1
@@ -146,15 +146,16 @@ public class Assignment {
      */
     public static void pascalTriangle(int rows) {
         int[][] arr = new int[rows][(rows*2)-1];
-        arr[0][(rows*2)-2] = 1;
+        arr[0][arr[0].length/2] = 1;
         if(rows>1) {
 
         }
         //print down here
         for(int i=0;i<arr.length;i++) {
             for(int j =0;j<arr[i].length;j++) {
-
+                System.out.print(arr[i][j]);
             }
+            System.out.println("");
         }
 //        int[] arr;
 //        for (int i = 0; i < rows; i++) {
