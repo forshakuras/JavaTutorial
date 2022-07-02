@@ -7,6 +7,7 @@ public class Arrays {
         Random rand = new Random();
         for(int i=0;i<arr.length;i++) {
             arr[i] = rand.nextInt(100);
+
             System.out.println(arr[i]);
         }
         char[] cArr = new char[5];
@@ -17,14 +18,14 @@ public class Arrays {
         System.out.println(new String(cArr));
 
         //2d arrays
-        int[][] arr2D = new int[5][5];
+        int[][] arr2D = new int[5][2];
         for(int i=0;i<5;i++) {
-            for(int j=0;j<5;j++) {
+            for(int j=0;j<2;j++) {
                 arr2D[i][j] = rand.nextInt(100);
             }
         }
         for(int i=0;i<5;i++) {
-            for(int j=0;j<5;j++) {
+            for(int j=0;j<2;j++) {
                 System.out.println(arr2D[i][j]);
             }
         }
