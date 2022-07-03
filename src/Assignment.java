@@ -17,7 +17,11 @@ public class Assignment {
         1 2 1
        1 3 3 1
          */
-        pascalTriangle(4);
+        //pascalTriangle(4);
+        NumbersSmallerThanCurrentNumber(new int[]{8,1,2,2,3});
+        ArrayCalculator(new int[]{1,2,3,4,5}, new int[]{5,4,3,2,1}, "add");
+        ArrayCalculator(new int[]{1,2,3,4,5}, new int[]{5,4,3,2,1}, "multiply");
+        ArrayCalculator(new int[]{10,8,6,4}, new int[]{5,2,2,4}, "divide");
     }
 
     /*
@@ -179,25 +183,36 @@ public class Assignment {
             System.out.println("");
         }
     }
-    //print down here
-
-//        for(
-//    int i = 0;
-//    i<arr.length;i++)
-//
-//    {
-//        for (int j = 0; j < arr[i].length; j++) {
-//            System.out.print(arr[i][j]);
-//        }
-//        System.out.println("");
-//    }
-//        int[] arr;
-//        for (int i = 0; i < rows; i++) {
-//            arr =[1];
-//            for (int j = 0; j < i; j++) {
-//                arr.push(arr[i - 1][j - 1] + arr[i - 1][j])
-//
-//            }
-//        }
+    /*
+    Input: nums = [8,1,2,2,3]
+    Output: [4,0,1,1,3]
+    Explanation:
+    For nums[0]=8 there exist four smaller numbers than it (1, 2, 2 and 3).
+    For nums[1]=1 does not exist any smaller number than it.
+    For nums[2]=2 there exist one smaller number than it (1).
+    For nums[3]=2 there exist one smaller number than it (1).
+    For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
+     */
+    public static void NumbersSmallerThanCurrentNumber(int[] nums) {
+        //you can just print out each number line by line
+        //to get you started you need a new array to hold the result
+        int[] result =  new int[nums.length];
+    }
+    //similar to the original calculator problem but this time we have 2 arrays
+    //calculate the result of each corresponding index with the operation
+    //ex: [1,2,3,4,5], [5,4,3,2,1], "add" [6,6,6,6,6]
+    //ex: [1,2,3,4,5], [5,4,3,2,1], "multiply" [5,8,9,8,5]
+    //ex: [10,8,6,4], [5,2,2,4], "divide" [2,4,3,1]
+    //you can assume the 2 arrays will always have the same length with valid numbers i.e. no divide by 0 or anything
+    public static void ArrayCalculator(int[] arr1, int[] arr2, String operation) {
+        //you can just print out each number line by line
+        //to get you started you need a new array to hold the result
+        //remember for divide you might need
+        if(operation == "divide") {
+            double[] result = new double[arr1.length];
+        } else {
+            int[] result = new int[arr1.length];
+        }
+    }
 }
 
