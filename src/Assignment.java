@@ -145,28 +145,41 @@ public class Assignment {
      hint: use 2d int array
      */
     public static void pascalTriangle(int rows) {
-        int[][] arr = new int[rows][(rows*2)-1];
-        arr[0][arr[0].length/2] = 1;
-        int startingPoint = (arr[0].length/2)-1;
-        int endingPoint = (arr[0].length/2)+1;
+        int[][] arr = new int[rows][(rows * 2) - 1];
+        arr[0][arr[0].length / 2] = 1;
+        int startingPoint = (arr[0].length / 2) - 1;
+        int endingPoint = (arr[0].length / 2) + 1;
         //
-        if(rows>1) {
-            for(int i=1;i<arr.length;i++) {
+        if (rows > 1) {
+            for (int i = 1; i < arr.length; i++) {
                 //i=3
-                for(int j=startingPoint;j<=endingPoint;j+=2) {
-                    // if j is index 0 or j is the last element of the array set to 1
-                    // other wise take the previous and next element of the row above
-                    // and add the 2 numbers together to get the current number
+                for (int j = startingPoint; j <= endingPoint; j += 2) {
+                    // if (if j is index 0 or j is the last element of the array set to 1
+                    if (j == 0 || j == arr[i].length - 1) {
+                        arr[i][j] = 1;
+                    } else {
+                        arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j + 1];
+                    }
                 }
+                endingPoint = endingPoint+1;
+                startingPoint = startingPoint - 1;
+
+                // other wise take the previous and next element of the row above+
+                // and add the 2 numbers together to get the current num`ber
             }
         }
-        //print down here
-        for(int i=0;i<arr.length;i++) {
-            for(int j =0;j<arr[i].length;j++) {
-                System.out.print(arr[i][j]);
-            }
-            System.out.println("");
+    }
+    //print down here
+        for(
+    int i = 0;
+    i<arr.length;i++)
+
+    {
+        for (int j = 0; j < arr[i].length; j++) {
+            System.out.print(arr[i][j]);
         }
+        System.out.println("");
+    }
 //        int[] arr;
 //        for (int i = 0; i < rows; i++) {
 //            arr =[1];
@@ -175,5 +188,5 @@ public class Assignment {
 //
 //            }
 //        }
-    }
+}
 }
