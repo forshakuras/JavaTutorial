@@ -161,25 +161,36 @@ public class Assignment {
                         arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j + 1];
                     }
                 }
-                endingPoint = endingPoint+1;
+                endingPoint = endingPoint + 1;
                 startingPoint = startingPoint - 1;
 
                 // other wise take the previous and next element of the row above+
                 // and add the 2 numbers together to get the current num`ber
             }
         }
+        for(int i=arr.length-1;i>=0;i--) {
+            for(int j=0;j<arr[i].length;j++) {
+                if(arr[i][j]==0) {
+                    System.out.print(" ");
+                }else {
+                    System.out.print(arr[i][j]);
+                }
+            }
+            System.out.println("");
+        }
     }
     //print down here
-        for(
-    int i = 0;
-    i<arr.length;i++)
 
-    {
-        for (int j = 0; j < arr[i].length; j++) {
-            System.out.print(arr[i][j]);
-        }
-        System.out.println("");
-    }
+//        for(
+//    int i = 0;
+//    i<arr.length;i++)
+//
+//    {
+//        for (int j = 0; j < arr[i].length; j++) {
+//            System.out.print(arr[i][j]);
+//        }
+//        System.out.println("");
+//    }
 //        int[] arr;
 //        for (int i = 0; i < rows; i++) {
 //            arr =[1];
@@ -189,4 +200,4 @@ public class Assignment {
 //            }
 //        }
 }
-}
+
