@@ -18,10 +18,10 @@ public class Assignment {
        1 3 3 1
          */
         //pascalTriangle(4);
-        NumbersSmallerThanCurrentNumber(new int[]{8,1,2,2,3});
-        ArrayCalculator(new int[]{1,2,3,4,5}, new int[]{5,4,3,2,1}, "add");
-        ArrayCalculator(new int[]{1,2,3,4,5}, new int[]{5,4,3,2,1}, "multiply");
-        ArrayCalculator(new int[]{10,8,6,4}, new int[]{5,2,2,4}, "divide");
+        NumbersSmallerThanCurrentNumber(new int[]{8, 1, 2, 2, 3});
+        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "add");
+        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "multiply");
+        ArrayCalculator(new int[]{10, 8, 6, 4}, new int[]{5, 2, 2, 4}, "divide");
     }
 
     /*
@@ -72,37 +72,7 @@ public class Assignment {
     Note: for division need to print out correct decimal or remainder or both even
     hint: google "java int to double conversion"
     */
-    public static void calculate(int firstNum, int secondNum, String operation) {
-        double result;
-        if (operation == "add") {
-            result = firstNum + secondNum;
-            System.out.println(firstNum + " plus " + secondNum + " is equal to " + result);
-        } else if (operation == "minus") {
-            result = firstNum - secondNum;
-            System.out.println(firstNum + " minus " + secondNum + " is equal to " + result);
-        } else if (operation == "multiply") {
-            result = firstNum * secondNum;
-            System.out.println(firstNum + " multiply " + secondNum + " is equal to " + result);
-        } else if (operation == "divide") {
-            double firstNumdecimal = firstNum;
-            double secondNumdecimal = secondNum;
-            result = firstNumdecimal / secondNumdecimal;
 
-            System.out.println(firstNum + " divide " + secondNum + " is equal to " + result);
-        } else {
-            System.out.println("wrong operation");
-        }
-
-    }
-
-    /*
-    create a method that takes in an intArr and a string operation that's either "summation" or
-    "factorial" return the result of the array and also print out the smallest and largest number
-    i.e summationOrFactorial([1,2,3,4,5], "summation") should print
-    "summation is equal to 15"
-    "smallest number is 1 and largest number is 5"
-    hint google "java min/max int"
-     */
     public static void summationOrFactorial(int[] numArr, String operation) {
         int smallest = numArr[0];
         int largest = numArr[0];
@@ -172,17 +142,18 @@ public class Assignment {
                 // and add the 2 numbers together to get the current num`ber
             }
         }
-        for(int i=arr.length-1;i>=0;i--) {
-            for(int j=0;j<arr[i].length;j++) {
-                if(arr[i][j]==0) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] == 0) {
                     System.out.print(" ");
-                }else {
+                } else {
                     System.out.print(arr[i][j]);
                 }
             }
             System.out.println("");
         }
     }
+
     /*
     Input: nums = [8,1,2,2,3]
     Output: [4,0,1,1,3]
@@ -196,8 +167,21 @@ public class Assignment {
     public static void NumbersSmallerThanCurrentNumber(int[] nums) {
         //you can just print out each number line by line
         //to get you started you need a new array to hold the result
-        int[] result =  new int[nums.length];
+        int[] result = new int[nums.length];
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums.length; j++) {
+
+                if (nums[i] > nums[j]) {
+                    count = count + 1;
+                    result[i] = count;
+                }
+            }
+            count = 0;
+        }
     }
+
+
     //similar to the original calculator problem but this time we have 2 arrays
     //calculate the result of each corresponding index with the operation
     //ex: [1,2,3,4,5], [5,4,3,2,1], "add" [6,6,6,6,6]
@@ -208,11 +192,57 @@ public class Assignment {
         //you can just print out each number line by line
         //to get you started you need a new array to hold the result
         //remember for divide you might need
-        if(operation == "divide") {
-            double[] result = new double[arr1.length];
-        } else {
-            int[] result = new int[arr1.length];
-        }
-    }
-}
 
+        //do we need to declare the arrays after it is passed in
+        if (operation == "divide") {
+            double[] result = new double[arr1.length];
+            for (int i = 0; i < arr.length; i++) {
+                arr1[i] / arr2[i] = result[i];
+                System.out.println(result[i]);
+            }}
+         else{
+                int[] result = new int[arr1.length];
+
+                if (operation == "add") {
+                    for (int i = 0; i < arr1.length; i++) {
+                        arr1[i] + arr2[i] = result[i];
+                        System.out.println(result[i]);
+                    }
+                } else if (operation == "minus") {
+                    for (int i = 0; i < arr1.length; i++) {
+                        arr1[i] - arr2[i] = result[i];
+                        System.out.println(result[i]);
+                    }
+
+
+                } else if (operation == "multiply") {
+                    for (int i = 0; i < arr1.length; i++) {
+                        arr1[i] * arr2[i] = result[i];
+                        System.out.println(result[i]);
+                    }
+                }
+
+            }
+
+    public static void calculate(int firstNum, int secondNum, String operation) {
+        double result;
+        if (operation == "add") {
+            result = firstNum + secondNum;
+            System.out.println(firstNum + " plus " + secondNum + " is equal to " + result);
+        } else if (operation == "minus") {
+            result = firstNum - secondNum;
+            System.out.println(firstNum + " minus " + secondNum + " is equal to " + result);
+        } else if (operation == "multiply") {
+            result = firstNum * secondNum;
+            System.out.println(firstNum + " multiply " + secondNum + " is equal to " + result);
+        } else if (operation == "divide") {
+            double firstNumdecimal = firstNum;
+            double secondNumdecimal = secondNum;
+            result = firstNumdecimal / secondNumdecimal;
+
+            System.out.println(firstNum + " divide " + secondNum + " is equal to " + result);
+        } else {
+            System.out.println("wrong operation");
+        }
+
+    }
