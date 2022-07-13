@@ -38,4 +38,8 @@ public class Fruit {
     public void ShowInformation() {
         System.out.println(String.format("The fruit %s has the colour %s and tastes %s", name, colour, taste));
     }
+
+    public static void ShowInformationStatic() {
+        System.out.println("This is our static show information");
+    }
 }
