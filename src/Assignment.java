@@ -1,6 +1,7 @@
 public class Assignment {
     public static void main(String[] args) {
         System.out.println("Hello World");
+ //       ArrayCalculator(new int[]{10, 8, 6, 4}, new int[]{5, 2, 2, 4}, "divide");
 //        fizzbuzz(1, 15);
 //        calculate(10, 10, "add"); //should print 20
 //        calculate(10, 10, "minus"); //should print 0
@@ -19,9 +20,9 @@ public class Assignment {
          */
         //pascalTriangle(4);
         NumbersSmallerThanCurrentNumber(new int[]{8, 1, 2, 2, 3});
-        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "add");
-        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "multiply");
-        ArrayCalculator(new int[]{10, 8, 6, 4}, new int[]{5, 2, 2, 4}, "divide");
+//        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "add");
+//        ArrayCalculator(new int[]{1, 2, 3, 4, 5}, new int[]{5, 4, 3, 2, 1}, "multiply");
+//        ArrayCalculator(new int[]{10, 8, 6, 4}, new int[]{5, 2, 2, 4}, "divide");
     }
 
     /*
@@ -174,10 +175,14 @@ public class Assignment {
 
                 if (nums[i] > nums[j]) {
                     count = count + 1;
-                    result[i] = count;
+
                 }
             }
+            result[i] = count;
             count = 0;
+        }
+        for(int i=0;i<result.length;i++) {
+            System.out.println(result[i]);
         }
     }
 
@@ -193,36 +198,36 @@ public class Assignment {
         //to get you started you need a new array to hold the result
         //remember for divide you might need
 
-        //do we need to declare the arrays after it is passed in
         if (operation == "divide") {
             double[] result = new double[arr1.length];
-            for (int i = 0; i < arr.length; i++) {
-                arr1[i] / arr2[i] = result[i];
+            for (int i = 0; i < arr1.length; i++) {
+                result[i] = (double) arr1[i] / (double) arr2[i];
                 System.out.println(result[i]);
-            }}
-         else{
-                int[] result = new int[arr1.length];
+            }
+        } else {
+            int[] result = new int[arr1.length];
 
-                if (operation == "add") {
-                    for (int i = 0; i < arr1.length; i++) {
-                        arr1[i] + arr2[i] = result[i];
-                        System.out.println(result[i]);
-                    }
-                } else if (operation == "minus") {
-                    for (int i = 0; i < arr1.length; i++) {
-                        arr1[i] - arr2[i] = result[i];
-                        System.out.println(result[i]);
-                    }
-
-
-                } else if (operation == "multiply") {
-                    for (int i = 0; i < arr1.length; i++) {
-                        arr1[i] * arr2[i] = result[i];
-                        System.out.println(result[i]);
-                    }
+            if (operation == "add") {
+                for (int i = 0; i < arr1.length; i++) {
+                    result[i] = arr1[i] + arr2[i];
+                    System.out.println(result[i]);
+                }
+            } else if (operation == "minus") {
+                for (int i = 0; i < arr1.length; i++) {
+                    result[i] = arr1[i] - arr2[i];
+                    System.out.println(result[i]);
                 }
 
+
+            } else if (operation == "multiply") {
+                for (int i = 0; i < arr1.length; i++) {
+                    result[i] = arr1[i] * arr2[i];
+                    System.out.println(result[i]);
+                }
             }
+
+        }
+    }
 
     public static void calculate(int firstNum, int secondNum, String operation) {
         double result;
@@ -246,3 +251,4 @@ public class Assignment {
         }
 
     }
+}
