@@ -14,5 +14,8 @@ public class ObjectAssignmentMain {
         4: this belongs to andrew who lives at 148 sweet water and is 58 and has 100$
         5: this belongs to joy who lives at 29 singer ct and is 32 and has 100$
          */
+
+        Customer nina = new Customer("nina","yoyoyo",6);
+        System.out.println(nina.getInformation());
     }
 }
